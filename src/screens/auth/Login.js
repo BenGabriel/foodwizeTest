@@ -22,6 +22,9 @@ const Login = () => {
   const navigation = useNavigation();
 
   const handleLogin = () => {
+    if (email === '') {
+      return alert('Pleas enter an email');
+    }
     if (email !== userEmail)
       return alert('User does not exist, Please sign up');
     navigation.replace('App');
